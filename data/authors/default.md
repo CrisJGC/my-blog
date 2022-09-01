@@ -1,16 +1,28 @@
 ---
-name: Tails Azimuth
+name: Cristian Gallegos
 avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
-github: https://github.com
+occupation: Desarrollador Web
+company:
+email: jacob.gallegos.c@gmail.com
+twitter: https://twitter.com/CrisDevW
+linkedin: https://www.linkedin.com/in/cristian-jacob-gallegos-corona-48b320226/
+github: https://github.com/CrisJGC
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+## Hola! Cristian Gallegos aqui (aka Cris)
 
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
+Actualmente mi campo esta centrado en el **desarrollo web** con tecnologias **React y Nextjs.**
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Sin embargo con el creciente aumento de la misma tecnologia y el campo tan grande que es la programación tambien estoy aprendiendo tecnologias enfocadas en **DevOps.** Y es que es esta misma magnitud del avance que permite ser flexible sobre que aprender.
+
+## ¿Por qué tener un blog o pagina personal?
+
+Para continuar aprendiendo, la mejor manera de mejorar en cualquier área es practicando y en este caso se hace a partir de coding, coding y más coding.
+
+Mejorar. No es solo programar, tambien escribir, aprender un poco sobre tendencias o simplemente tienes algo en mente y no sabes como expresarlo, pues que mejor que escribirlo ya que esto es un blog y para eso es.
+
+Compartir. No deberiamos guardar las cosas para solo para nosotros mismo. Ademas de podemos ponernos creativos con lo que hacemos aquí, tambien nos sirve para continuar un proceso que tedioso o no, es mejor seguirlo hasta el final.
+
+> Stopping a piece of work just because it’s hard, either emotionally or imaginatively, is a bad idea.
+
+Sthepen King.

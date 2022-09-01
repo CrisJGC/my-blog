@@ -1,11 +1,10 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Working out Search',
+    description: `¿Qué pasa cuando tenemos duda de un ejercicio? O que tal y queremos ver diferentes tecnicas,
+    o incluso ejercicios similares, bajo esa premisa se penso en esta página.`,
+    imgSrc: '/static/images/gymSearch.png',
+    href: 'https://gym-app-lilac.vercel.app',
   },
   {
     title: 'The Time Machine',

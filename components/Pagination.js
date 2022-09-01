@@ -14,7 +14,9 @@ export default function Pagination({ totalPages, currentPage }) {
         )}
         {prevPage && (
           <Link href={currentPage - 1 === 1 ? `/blog/` : `/blog/page/${currentPage - 1}`}>
-            <button rel="previous">Previous</button>
+            <button className="hover:text-orange-500" rel="previous">
+              Previous
+            </button>
           </Link>
         )}
         <span>
@@ -27,7 +29,9 @@ export default function Pagination({ totalPages, currentPage }) {
         )}
         {nextPage && (
           <Link href={`/blog/page/${currentPage + 1}`}>
-            <button rel="next">Next</button>
+            <button className="hover:text-orange-500" rel="next">
+              Next
+            </button>
           </Link>
         )}
       </nav>
