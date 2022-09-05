@@ -1,0 +1,113 @@
+---
+title: 'Conceptos de JS para entender mejor React'
+date: '2022-09-04'
+tags: ['escrito', 'frontend', 'js', 'react']
+draft: false
+images: ['/static/images/js-reactjs.png']
+summary: 'Cuando queremos saltar de un lenguaje a un framework por lo general nos surge la duda de que tanto necetiamos
+saber de dicho lenguaje para sentirnos comodo, si bien no hay una respuesta exacta, por lo general si hay un apoximado 
+sobre que saber de dicho lenguaje...'
+---
+
+![js-reactjs](/static/images/js-reactjs.png)
+
+Photo by <a href="https://unsplash.com/es/@lautaroandreani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Lautaro Andreani</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Cuando queremos saltar de un lenguaje a un framework por lo general nos surge la duda de que tanto necesitamos
+saber de dicho lenguaje para sentirnos cómodos, si bien no hay una respuesta exacta, por lo general si hay un aproximado
+sobre que saber de dicho lenguaje, en este caso hablemos más concretamente de JS y que conceptos necesitamos para que nuestra
+experiencia con React sea más placentera. Si bien he conocido personas que dicen aprender React al tiempo que aprenden JS,
+y claro no creo que sea imposible, para mi es mejor tener bases antes de saltar al siguiente punto.
+
+No explicare que es React o JS, doy por hecho que si están aquí tienen una noción sobre estos temas y cuál es su finalidad,
+por otro lado, si hablamos de que necesitamos saber de JS tampoco estaré hablando de sus bases, esto quiere decir,
+que es una variable, sus tipos, condicionales o bucles. ( ´･･)ﾉ(.\_.`)
+
+**FUNCIONES**
+
+Una función es un bloque que nos permite reutilizar código, quiere decir que mientras sigamos llamando dicha función
+se vuelve a ejecutar sin tener que reescribir todo el código.
+
+![function-js](/static/images/function-js.png)
+
+Photo by [me](https://my-blog-crisjgc.vercel.app)
+
+Esto es pura lógica, pero las funciones también pueden retornar un valor final, ya sea un Sting, número, array, objeto
+u otra función y esta lógica de devolver una función es muy usado en React, pensando en los componentes, por ejemplo.
+
+También pueden recibir parámetros, ya que no siempre tenemos todas las variables y en muchos casos esa información
+es proporcionado por el usuario/usuarios.
+
+![function-js-params](/static/images/function-js-params.png)
+
+Photo by [me](https://my-blog-crisjgc.vercel.app)
+
+**OBJETOS**
+
+Los objetos son representados con llaves **{}**, y los datos que llevan suelen ser representados por pares,
+esto es una key y su valor. Gracias a como almacena valores, puede incluso guardar objetos dentó de objetos.
+Para darle un uso a estos valores los guardamos en una variable y después usando métodos podemos hacer
+uso de la información o incluso simplemente mostrar lo guardado en él.
+
+![obj-js](/static/images/obj-js.png)
+
+**DOM**
+
+El **DOM** o **document object model**, implica manipular el navegador, esto quiere decir que podemos crear botones,
+listas, títulos, todo desde js, de igual modo los manejadores de eventos o event handlers, son los eventos que
+permiten agregar interactividad a la página, por ejemplo, arrastrar un elemento, o al hacer click en un botón,
+ejecutar cierta lógica. Nuestro objetico con saber el DOM es conocer que estamos realizando, en ocasiones dejamos
+muy de lado la teoría, y eso es porque pensamos que solo al replicar los códigos es suficiente, pero si nos piden
+que agreguemos un evento a un botón que cambie la información, y no entendemos que nos solicitan, se vuelve
+complicado el trabajo.
+Por otra parte, la razón de usar frameworks como React, Vue, Angular, es que facilitan
+la manera en que manipulamos dicho documento.
+
+**DESECTRUCTURACION**
+
+Esto es de lo más común en React, al pasar valores entre componentes o funciones es común usar la **desestructuración**
+lo cual facilita o mejor dicho simplifica el código que usamos, por ejemplo, recibo un objeto, pero de
+él solo quiero algunos valores específicos.
+
+![dom-js](/static/images/dom-js.png)
+
+**METODOS DE ARRAY**
+
+Los **métodos de un array** son muy utilizados en programación y claro React no es una excepción, vamos a centrarnos en
+aquellos que no modifican el array original, como lo son map, filter.
+Originalmente cuando recorremos un array en js vanilla y sobre todo cuando vamos empezando solemos usar un for,
+para hacer dichos bucles. Pero en React no suele usarse, y estaremos implementando map y filter en estos casos.
+
+**Map** nos regresa un nuevo arreglo con las operaciones que le indiquemos a cada elemento.
+
+![for-js](/static/images/for-js.png)
+
+![map-js](/static/images/map-js.png)
+
+**Filter** Regresa todos los elementos que cumplan con el filtro aplicado.
+
+![filter-js](/static/images/filter-js.png)
+
+**Modules**
+
+Los modules son utilizados prácticamente para cada componente de React, esto es la importación de un archivo hacia otro,
+incluso puedes usar desestructuración en él, si solo necesitas una función en específico y no quieres cargar todo el módulo.
+Claro cuando los hacemos de manera personal podemos dividirla de tantas maneras que podemos tener solo una función por archivo,
+pero qué pasa con importaciones de módulos o paquetes más grandes, pues que no siempre requerimos todo, y en React es muy común
+cuando importamos useState o useEffect, por decir algunos.
+
+**Async Await**
+
+A pesar que todo esto de JS solemos escribir nosotros el código, por lo general mucha información no es dada de esa forma,
+más bien provienen de un backend, por tanto, es necesario hacer uso del **Async Await**. Esto proviene de las promesas y claro
+es necesario conocer el fecth. Suele pasar y más de lo que a uno le gustaría, que las empresas hacen uso de su propia manera
+de escribir código, pero el punto es que hay que entender que es fecth, promesas y el Async/Await.
+
+Async Await apareció en el ES2017 y es una nueva definición para implementar promesas; lo que hace es definir un método de
+tipo async de la forma async function getData() {} este utiliza el await para hacer esperar a la función hasta que esta responda.
+
+![async-await-js](/static/images/async-await-js.png)
+
+Listo, esto es lo que considero conceptos previos de JS para React, estoy seguro que buscando más información puede que exista
+una ligera diferencia sobre que considera cada persona necesario, pero esto era más un repaso a tener en cuenta.
+Les dejo un video sobre esto mismo por si quieren pasarse y checarlo.
