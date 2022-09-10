@@ -1,0 +1,85 @@
+---
+title: '¿Qué factores influyen en un pull request?'
+date: '2022-09-09'
+tags: ['escrito', 'git', 'github']
+draft: false
+images: ['/static/images/js-reactjs.png']
+summary: 'Cuando queremos tomar un proyecto de un repositorio, para indagar por nuestra cuenta en él código solemos 
+hacer un copy de dicho repositorio, pero que pasa cuando queremos contruibir con dicho trabajo, bueno para eso esta 
+el pull request, pero si no llevamos a cabo ciertas prácticas, es posible que esta propuesta sea rechazada en multiples
+ocasiones...'
+---
+
+Cuando queremos tomar un proyecto de un repositorio, para indagar por nuestra cuenta en él código solemos hacer un copy de dicho repositorio, pero que pasa cuando queremos contribuir con dicho trabajo, bueno para eso está el pull request, pero si no llevamos a cabo ciertas prácticas, es posible que esta propuesta sea rechazada en múltiples ocasiones.
+
+Contribuir con un proyecto open-source, suele requerir hacer lo que conocemos como pull request, a la espera de que un miembro central del equipo principal lo revise y con un poco de suerte, apruebe dichos cambios. ¿Pero que es un pull request?
+
+## Pull request
+
+Pull request es una acción que se lleva de por medio en un repositorio, en el desarrollo de software, es el proceso de unir cambios realizados en el código a un proyecto central, no sin que antes lo revise una persona encargada. Dicho de otro modo, hacer un merge (pull request) es preguntarle a otro programador que cheque nuestro código.
+Esta forma de trabajar nos ayuda que al tener nosotros una copia del repositorio de manera local, podamos crear nuevas funciones, eliminar bugs o simplemente actualizar el codigo, sin comprometer el código del proyecto principal, ni afectar la que el usuario ve. Claro que por lo mismo existen múltiples programadores trabajando con el código, y necesitamos hacer que aquellos que se encarguen de revisarlo pierdan el menor tiempo posible, pero primero ¿cómo hacemos un pull request?
+
+## ¿Cómo hacer un pull request?
+
+Existen una serie de pasos básicos desde que iniciamos la copia del proyecto, que en este caso se llama fork.
+
+- **Fork al repositorio y crear clone.** Primero se crea un fork del repositorio principal (main), y después se clona en nuestra máquina virtual.
+- **Cambios locales.** El programador, osea nosotros, hace los cambios, crea codigo o hace el debugging, para la resolución del problema o funcionalidad.
+- **Push al repositorio main.** Una vez terminado y hecho los test correspondientes, se hace un pull de vuelta al repositorio fork, que creamos al inicio.
+- **Pull request.** Aquí es donde, como su nombre lo indica se hace el pull request al repositorio original (main), donde una alerta es enviada para una revisión. La persona encargada de mantener y revisar el codigo se encargará entonces de decidir qué hacer con el codigo, donde nos harán comentarios o peticiones para algún cambio que consideren más necesario antes de hacer el aprobado.
+- Es posible que si se hacen comentarios se vuelva a repetir pasos anteriores, con la finalidad de un codigo y un producto mejor.
+- **Merge (unir) con el proyecto main.** Una vez que se aprueba el pull request, los cambios se unen al repositorio de donde se hizo el fork, el proyecto main. The producto entonces con las nuevas especificaciones o correcciones de bug se actualiza y es entregado al usuario final.
+
+## Crear un pull request
+
+Por lo general un pull request varia un poco dependiendo de la herramienta que se este utilizando y el tipo de repositorio, esto es GitHub, GitLab, BitBucket. Pero esencialmente son tres pasos:
+
+**Drafting**
+
+Cuando se hace un pull request por lo general el programador da una breve descripción del cambio en el codigo. Información que debe incluir es acerca del tipo de actualización que se hizo, si es una nueva actualización, nueva funcionalidad o arreglo un bug, así como el repositorio origen/brach y de igual modo repositorio de destino/brach.
+El pull request no puede hacer un merge hasta que el desarrollador no lo ha marcado como listo para revisión.
+
+**Merge**
+
+El merge o la unión se lleva a cabo cuando el pull request se ha aprobado. Pero antes de proceder, la persona encargada de revisar, hará comentarios sobre algún problema o cambios que sean pertinentes. Una vez todo esté terminado esta persona puede hacer un merge de manera más segura.
+
+**Actualización**
+Antes de hacer el merge el revisor, puede requerir alguna actualización extra, en tal caso se dará un feedback al programador para la solución del problema, y una vez resuelto se harán nuevos commits para su posterior actualización y aprobación.
+
+## Revisión del código
+
+Ahora ¿Qué pasa con la contraparte, el encargado de hacer las revisiones? Por lo general esta persona también necesita buenas prácticas para hacer dicho trabajo, y no hacer pesada la visa del desarrollador. Ser un revisor es toda una ciencia, ¿cómo sabes que el codigo que te entregan será beneficioso para el proyecto? ¿Cómo te comunicas con alguien que no conoces sin que se sienta ofendido y sea constructivo
+tu feedback? ¿Cuánto tiempo es bueno invertir en una revisión y el tiempo de devolución del codigo para los cambios necesarios?
+
+## Respetar el tiempo
+
+Cuando un desarrollador sube un codigo a revisión, él espera que le proporciones un feedback en un plazo relativamente corto, esto con la finalidad de tanto no perder el hilo de trabajo, como si es que tiene más carga de trabajo evites que se dedique a otra parte del codigo que necesite de su atención. Por lo cual es mejor responderle en el primer par de horas y hacerle saber que su codigo está en revisión, no dejes que pasen muchas horas y menos días.
+Recuerda respetar el tiempo y trabajo de los demás.
+
+## Feedback constructivo
+
+Recuerda que todos somos humanos, y cuando se trata del trabajo de otra persona hay que tener tacto para hablar. Lo mejor es decir frases que reflejen lo que necesitamos, pero de manera positiva, esto también afectara la respuesta del desarrollador y la facilidad con la que trata un problema. Evitemos frases al estilo: ¿Por qué hiciste esto?, esto está mal o esto no funciona.
+Intenta frases que sean alentadoras e inciten al trabajo como: Que tal si usamos esto, ya que brinda una mejor respuesta por parte del usuario, o esta funcionalidad podríamos resolverla de esta manera y será más corta y adecuada a nuestro modo de trabajo.
+
+## Deja tu ego fuera del trabajo
+
+Ocasionalmente al hacer revisiones podemos llegar a desacuerdos, en estas situaciones deberíamos apuntar más a una comunicación que apoye y ayude al mejorar el proyecto, que una persona sea un senior y la otra un junior no quiere decir que el junior va a estar mal, puede que vea el problema que afrontemos de una mejor manera y en tal caso es cuando debemos saber que de esto se trata el trabajo, seguir adelante y transmitir ideas y razonamientos. De esa forma también podemos ser más precisos sobre lo que necesita ser cambiado o mejorado.
+Aquí es mejor evitar palabras o vocablos que pueden ser confusos.
+
+## Reforzar mejores prácticas con el código
+
+Podemos implementar herramientas para el CI (continuous integración), esto permite que el codigo pase por test y así nuestros compañeros developers se motiven a continuar con el trabajo, así no estamos esperando que el codigo simplemente funcione porque sí. Aquí GitHub, por ejemplo, nos ofrece apoyo para herramientas en este ámbito.
+
+## Revisar archivos del proyecto
+
+Cuando las aplicaciones son de mediana a gran escala, suelen existir una gran cantidad de archivos alrededor de la misma. Esto suele incluir documentación, test, archivos de configuración, y claro codigo en cantidad. Es recomendado hacer una revisión constante de dichos archivos, ya que también suelen tener actualizaciones, verificar que la documentación ha cambiado, o si se utiliza alguna nueva norma, que los nuevos test estén incluidos, o los cambios en las configuraciones.
+
+## Visualizar el panorama
+
+Podría ser una de las cosas más difíciles de hacer, debemos tomar en cuenta si el codigo en mantenible, será útil para una solución momentánea o nos dará una solución a largo plazo, debemos de recordar que no solo queremos soluciona el problema actual, si no en medida de lo posible no generar nuevos o posibles desvíos innecesarios.
+
+## Recursos
+
+- [Electron](https://www.electronjs.org/es/docs/latest/development/pull-requests)
+- [GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+- [Rewind](https://rewind.com/blog/best-practices-for-reviewing-pull-requests-in-github/)
