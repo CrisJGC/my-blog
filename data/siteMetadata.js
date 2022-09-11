@@ -6,7 +6,7 @@ const siteMetadata = {
   description: 'Cris Blog',
   language: 'es-mx',
   theme: 'system',
-  siteUrl: 'https://my-blog-three-flax.vercel.app',
+  siteUrl: 'https://my-blog-crisjgc.vercel.app',
   siteRepo: 'https://github.com/CrisJGC/my-blog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
