@@ -7,12 +7,11 @@ const projectsData = [
     href: 'https://gym-app-lilac.vercel.app',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'E-commerce demo',
+    description: `Buscamos emular una ecommerce, con modelos basados en slug, a partir de sanity, metodo de pago
+    con stripe, y usando Next como framework, asi como material iu para el maquetado por componentes`,
+    imgSrc: '/static/images/e-commerce.png',
+    href: 'https://ecommerce-sanity-tau.vercel.app',
   },
 ]
 
