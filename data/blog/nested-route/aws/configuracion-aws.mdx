@@ -1,0 +1,76 @@
+---
+title: 'Configurar aws, facturación'
+date: '2022-09-19'
+tags: ['escrito', 'aws', 'nube']
+draft: false
+images: ['/static/images/aws-coins.png']
+summary: 'Cuando queremos aprender una nueva tencología, en éste caso aws, puede surgirnos la duda de como configurarlo 
+ya que tiene muchas funciones, pero como podemos ondar en éste y no tener cargos por pasarnos de los que nos ofrece
+las versiones de prueba...'
+---
+
+![aws-coins](/static/images/aws-coins.png)
+
+Primero que nada, esto es despues de haberte creado tu cuenta en [AWS](aws.amazon.com/free/), solo recuerda que te
+pedira una tarjeta para validar la cuenta, no se si dependa de donde se cree la cuenta, en mi caso fue un cargo de
+un dolar, a tomar encuenta.
+
+La primera configuracíon que se hace y practicamente donde quieran estudiar, curso o la informacion de AWS, te
+recomiendan hacer un USER y no usar la cuenta root, por tanto lo primero es buscar un servicio llamado IAM, este te
+permite crear usuarios que pueden acceder y usar la cuenta con los privilegios que le sedas.
+
+![iam](/static/images/iam.png)
+
+Activamos MFA el cual nos permite realizar autentificacion a partir de una aplicacion de google que tendremos
+instalado en nuestro telefono y periodicamente estara cambiando la clave para acceder. OJO esto no quiere decir
+que no usaras tu password, necesitas ambos para proceder. Al activarlo en la seccion MFA seleccionamos activar
+y virtual MFA device.
+
+![mfa](/static/images/mfa.png)
+
+Ahora instalamos el autentificador en nuestro telefono y seguimos los pasos que nos indica la web, un escaneo de QR
+y pasamos los digitos en la parte siguiente, y esta listo.
+
+Ahora en el dashboard o panel, seleccionamos usuarios, agregar usuarios le damos un nombre y click en contraseña:
+acceso a la consola de aws, en clave de acceso yo suelo usarla cuando estoy en cuentas que usan un backend para
+generar una subida de archivos o lectura, ya sea en node, go, etc, escoja su lenguaje favorito para esto.
+Tambien cuando usamos Ansible o TerraForm para acceder a los recursos de AWS.
+
+![user_pass](/static/images/user_pass.png)
+
+RECUERDEN guardar bien las llaves de acceso, por ejemplo las secret_keys solo se muestran mientras se configura, y no
+es posible recuperarlas.
+
+Ahora seleccionamos la politica que deseamos, esto dependera de que derechos quieres que tenga tu usuario, puedes
+escoger una de las establecidas o crear una personalizada, esto debes hacerlo antes de crear el usuario.
+Siguiente y crear usuario, ademas puedes descargar el .csv y si selecionaste las claves, aqui es donde aparecen y debemos
+guardalas muy bien.
+
+Al finalizar nos regresa a la pantalla del dashboard y en la parte derecha nos aparece una url, que es la que necesita
+el usuario para poder conectarse a la consola, asi como cambiar y colocar un alias.
+
+![aws-url](/static/images/aws-url.png)
+
+Tambien podemos colocar credenciales de seguridad con el autentificado de google, damos click al usuario, en la pestaña
+de security credentials, asignar MFA device y mismo proceso que antes.
+
+![user-credentials](/static/images/user-credentials.png)
+
+**ALERTA BILLS**
+
+Para esto accedemos donde esta nuestro nombre en la parte superior derecha, en panel de facturacion (billing dashboard),
+te recomiendo que revises la seccion de facturas o bills, para comprobar que estas en ceros.
+Ahora damos click en preferencias de facturación y seleccionamos recibir PDF por correo y recibir alertas de uso de nivel
+gratuito, ingreamos nuestro correo, asi como tambien click en recibir alertas de factiración.
+
+![user-bill-alerts](/static/images/user-bill-alerts.png)
+
+Ahora buscamos CloudWatch en la consola, este aplicacion sirve para monitorear, pero en este caso solo la usaremos para
+la alarma del facturación. seleccionamos todas las alarmas y crear alarma, para continuar damos click en metricas,
+despues en facturación y en cargo total estimado. Al final continuamos con la divisa y seleccionar una métrica.
+Nos enfocamos en las condiciones y al final agregamos 5 dolares y de esta manera cuando nuestros recursos comiencen a
+cruzar ese valor nos mandara una notificación, siguiente en seleccionar un SNS, cremaos uno nuevo por ejemplo,
+monitoreo de facturación y el correo donde lo recibiremos, siguiente y le damos un nombre y finalizamos la alarma,
+recuerda que se necesitamos confirmar el correo. Tarda un tiempo pero en estado veras OK o CORRECTO, y esta listo.
+
+![user-alarm-set](/static/images/user-alarm-set.png)
