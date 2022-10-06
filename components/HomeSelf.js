@@ -24,7 +24,7 @@ const HomeSelf = () => {
           Actualmente enfocado en el desarrollo web, pero en constante aprendizaje de más
           tecnologías, como es el caso con herramientas para DevOps y Cloud.
         </p>
-        <p>
+        <p className="mt-5 text-lg leading-7 text-gray-500 dark:text-gray-400">
           Se quieres conocer más te invito a le sección de <strong>about me</strong>
         </p>
       </div>
