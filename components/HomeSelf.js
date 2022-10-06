@@ -22,7 +22,10 @@ const HomeSelf = () => {
         <p className="mt-5 text-lg leading-7 text-gray-500 dark:text-gray-400">
           Me gusta el crecimiento constante en cuanto a las Tecnologías de la Información.
           Actualmente enfocado en el desarrollo web, pero en constante aprendizaje de más
-          tecnologias.
+          tecnologías, como es el caso con herramientas para DevOps y Cloud.
+        </p>
+        <p>
+          Se quieres conocer más te invito a le sección de <strong>about me</strong>
         </p>
       </div>
     </div>
