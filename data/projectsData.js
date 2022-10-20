@@ -13,6 +13,15 @@ const projectsData = [
     imgSrc: '/static/images/e-commerce.png',
     href: 'https://ecommerce-sanity-tau.vercel.app',
   },
+  {
+    title: 'Share-me',
+    description: `Recreacion de una web con autentificación por Google, base usando sanity para guardar los 
+    usuarios e imagenes, frontend hecho con React, NOTA: al parecer han habido cambios en algunas librerias 
+    de apoyo para el uso de la autentificación de google, por tanto se deja un pequeño video en lugar de la web,
+    en lo que se arregla.`,
+    imgSrc: '/static/images/share-me.png',
+    href: 'https://clipchamp.com/watch/Uco26WahiIW',
+  },
 ]
 
 export default projectsData

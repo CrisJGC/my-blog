@@ -26,3 +26,23 @@ Compartir. No deberiamos guardar las cosas para solo para nosotros mismo. Ademas
 > Stopping a piece of work just because it’s hard, either emotionally or imaginatively, is a bad idea.
 
 Sthepen King.
+
+## Cursos / Formación
+
+**Curso Java básico**
+IPN, Centro de Investigación en Computación 2019
+
+**Curso JavaScript Moderno** <a href="http://ude.my/UC-fa64d5dc-cc29-4c09-b4b1-74ed977e9823">Certificado</a>
+Udemy 2021
+
+**Curso Master en JavaScript: JS, jQuery, Angular, NodeJS** <a href="https://www.udemy.com/certificate/UC-3b4175f6-0178-4835-b7ce-92803848687b/">Certificado</a>
+Udemy 2021
+
+**JavaScript Algorithms and Data Structures** <a href="https://freecodecamp.org/certification/fccf68f2559-9090-4954-8683-95d3b4bcc860/javascript-algorithms-and-data-structures">Certificado</a>
+freeCodeCamp 2022
+
+**React - Guia definitiva: hooks router redux NextJS** <a href="https://www.udemy.com/certificate/UC-53bc11c5-938b-4434-acbb-98f17c058fdd/">Certificado</a>
+Udemy 2022
+
+**DevOps Beginners to Advanced**
+Udemy en curso
