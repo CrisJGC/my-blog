@@ -1,0 +1,41 @@
+---
+title: 'Error al hacer push o add en Git'
+date: '2022-10-20'
+tags: ['escrito', 'git', 'github', 'error']
+draft: false
+images: ['/static/images/git-push-main-master.png']
+summary: 'Has terminado tu codigo y esta slisto para hacer el push a tu repositorio o uno nuevo, 
+pero al hacer el comando push o add te das cuenta que no se agrega nada al stage, vaya problema!!'
+---
+
+![git](/static/images/git.png)
+
+Photo by <a href="https://unsplash.com/@yancymin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Yancy Min</a> on <a href="https://unsplash.com/s/photos/git?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Este es un problema que me paso justo hace poco y decidí escribirlo para futuras referencias. Esto puede pasar por diversas
+causas, así que lo primero es leer que nos dice el **error**. De igual manera aquí te dejo algunas situaciones que podrían ser el caso.
+
+## Repositorio local y remoto no tienen los mismos archivos
+
+A ver esto puede sonar extraño, pero el caso es que, si agregas tu repo a GitHub, por ejemplo, y ahí creas el README en algunas ocasiones
+no te deja hacer el push y es necesario que primero hagamos un pull para traernos estos archivos modificados desde tu repositorio remoto,
+y ya después haces el push con todos los archivos, pero esto casos suelen ser contados.
+
+## Master o main
+
+Otro caso es que estemos haciendo el pull desde main y nuestro repo este configurado en master, por decir nombres, entonces simplemente
+necesitas checar desde donde lo estás haciendo el push y escribir correctamente, que en ocasiones hay errores por que escribimos rápido.
+
+![git-push-typo](/static/images/git-push-main-master.png)
+
+## Dos repositorios inicializados
+
+Este fue justo el caso que me paso en esta ocasión, tener dos repositorios locales inicializados y te preguntas ¿Cómo es esto posible?,
+bueno te pongo en situación. Tengo dos carpetas una enfocada donde esta centralizado el codigo, pero una de las carpetas la cree con
+create-react-app, como sabes este comando ya crea un repo local, pero yo no quería subir esta carpeta sola y al crear una segunda en el
+mismo nivel que la anterior y querer hacer el add no me dejaba, por tanto, lo que se hace es borrar la carpeta de git en la subcarpeta y
+dejar solo la superior.
+
+![git-doble-carpeta](/static/images/git-init.png)
+
+Este fue un artículo corto, pero quería que estuviera centrado solo en el problema
