@@ -44,5 +44,5 @@ freeCodeCamp 2022
 **React - Guia definitiva: hooks router redux NextJS** <a href="https://www.udemy.com/certificate/UC-53bc11c5-938b-4434-acbb-98f17c058fdd/">Certificado</a>
 Udemy 2022
 
-**DevOps Beginners to Advanced**
+**AWS Certified Developer Associate DVA-C01**
 Udemy en curso
