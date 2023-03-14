@@ -22,6 +22,30 @@ const projectsData = [
     imgSrc: '/static/images/share-me.png',
     href: 'https://clipchamp.com/watch/Uco26WahiIW',
   },
+  {
+    title: 'Booking-app Hotel',
+    description: `Modelo de una aplicacion web para registrar usarios, funciones base de ingresar usuarios, 
+    modificarlos y borrar. Al ser un modelo base solo tiene persistencia de datos mientras la aplicacion no se 
+    actualice fuera del navegador . Hecho con vitest.`,
+    imgSrc: '/static/images/booking-app.png',
+    href: 'https://hotel-regi.vercel.app',
+  },
+  {
+    title: 'Planificador de gastos',
+    description: `Web app para llevar un control de gastos, se ingresa un presupuestos para iniciar, despues se pasa a 
+    una segunda ventana donde ya podemos ingresar nuestros gastos, asi como poder filtrarlos en caso de necesitarlo y
+    modificarlos o borrarlos, de igual forma se puede reiniciar la app, hecho con vitest`,
+    imgSrc: '/static/images/planificador.png',
+    href: 'https://presupuesto-beta.vercel.app',
+  },
+  {
+    title: 'Crypto change',
+    description: `Web para revisar los principales cambios de monedas cripto con algunas divisas, como son el Euro,
+    Dolar, Peso mexicano y Libra esterlina, el principal ejercicio de esta web fue el uso de una restApi para el 
+    valor actualizado de las tasas de cambio, hecho con vitest`,
+    imgSrc: '/static/images/cripto-change.png',
+    href: 'https://crypto-change.vercel.app',
+  },
 ]
 
 export default projectsData
