@@ -1,5 +1,13 @@
 const projectsData = [
   {
+    title: 'Masterverse',
+    description: `Web para una landing page, el modelo fue con la idea de una pagina promocional, con diferentes
+    animaciones, realemnete colorida. Fue creada con Nextjs 13 para probar las nuevas funciones, como su nuevo 
+    sistema de routing`,
+    imgSrc: '/static/images/masterverse.png',
+    href: 'https://masterverse.vercel.app',
+  },
+  {
     title: 'Working out Search',
     description: `¿Qué pasa cuando tenemos duda de un ejercicio? O que tal y queremos ver diferentes tecnicas,
     o incluso ejercicios similares, bajo esa premisa se penso en esta página.`,
