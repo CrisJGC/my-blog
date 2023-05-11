@@ -1,0 +1,77 @@
+---
+title: 'Configurando Django para un APIREST'
+date: '2023-05-10'
+tags: ['escrito', 'python', 'django','backend']
+draft: false
+images: ['/static/images/developer-intro.png']
+summary: 'Cuando queremos crear un APIRest con Django necesitamos algunas configuraciones iniciales antes de
+poder crear nuestra aplicación, para ello hace falta unas Django REST Framework...'
+---
+
+![django](/static/images/django.png)
+
+Photo by <a href="https://unsplash.com/@faisaldada?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Faisal</a> on <a href="https://unsplash.com/photos/BI465ksrlWs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+## Primeros pasos
+
+Como saben para empezar antes es necesario tener instalado **Python**, en este caso ya que usaremos **Django 4**,
+necesitamos la versión 3.8.x de Python, ya que este no es un tutorial de ese lenguaje damos por hecho que
+ya está instalado, pero si quieres revisar que versión entonces abrimos la consola, y escribimos
+**python --version**, para asegurarnos que tenemos lo necesario.
+
+![py_version](/static/images/py-version.png)
+
+# Entorno virtual
+
+El entorno virtual es un espacio donde instalamos paquetes que no queremos de manera global, en este caso
+es necesario instalar, yo suelo usar venv, para ello desde la consola dentro de la carpeta donde realizaremos
+nuestro proyecto usamos **pip install virtualenv**, una vez instalado necesitamos ejecutar el comando
+**python -m venv "nombre_carpeta"**, nombre de la carpeta se refiere a donde vamos a instalar nuestros paquetes.
+
+![py_venv](/static/images/py-venv.png)
+
+El siguiente paso es activarlo, podemos usar el comando que es **source "directorio_proyecto(demo en este caso)/Scripts/activate"**,
+pero ya que estoy haciendo uso de **vscode**, si presionamos F1, escribimos python select, seleccionamos la
+opción que aparece esto nos proporciona cual es el intérprete para este proyecto, seleccionamos la opción de nuestra carpeta
+vscode nos lo marca con una estrella y listo (ojo, debes asegurarte de que diga venv, además ten instalado ya
+la extensión de python en vscode)
+
+![py_activate](/static/images/py-activate.png)
+
+## Django
+
+Ahora instalamos **DJango** usando **pip install django** y ejecutamos **django-admin startproject nombre .**,
+el nombre lo decidimos nosotros y el punto es porque no quiero que me cree una carpeta más, si no que
+quiero que lo cree ahí mismo en la raíz.
+
+![django](/static/images/py-django.png)
+
+Lo siguiente es crear y configurar nuestro modelo o app, para esto entramos a nuestra carpeta "django_rest",
+y abrimos el archivo de settings.py, ahora desde nuestra consola ejecutamos **python manage.py startapp
+"nombre del modelo"** y como vemos se ha creado nuestra carpeta con el nombre, ahora si en el archivo que abrimos
+en donde dice **INSTALLED_APP = [...]** agregamos nuestro modelo con el nombre. Y para que esto funcione,
+debemos agregarlo usando el migrate, comando **python manage.py migrate**, y así nuestras tablas se han creado.
+
+![django_migrate](/static/images/py-django-migrate.png)
+
+Ahora si corremos nuestro server usando **python manage.py runserver** y este corren en el puerto 8000.
+
+![django_run](/static/images/py-django-run.png)
+
+## Django Rest Framework
+
+Continuamos con la parte de Django Rest Framework, este si lo buscas en la red tiene su propia documentación,
+recomendamos que la cheques. Aquí para instalarlo usamos **pip install djangorestframework** y una vez instalado
+también es necesario agregarlo a el setting.py como hicimos con task.
+
+![django_rest](/static/images/py-django-rest.png)
+
+y listo podemos correr de nuevo nuestro servidor si no hay problemas lo ejecuta normalmente, aquí cabe mencionar
+que podemos tener otros pasos, depende de cómo hagamos la interacción, pero lo ideal es también agregar un
+middleware para conectar nuestro servidor de backend con el de frontend, recuerden que los navegadores no suelen
+permitir interacción entre dos servidores y para esto es necesario un cors que nos permita dar la autorización.
+
+![django_on](/static/images/py-django-on.png)
+
+Espero les sea de utilidad, y esto puede cambiar en el futuro, como no suele pasar en este mundo de la tecnología,
+pero a eso venimos a seguir actualizándonos.
