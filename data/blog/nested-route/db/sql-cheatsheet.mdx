@@ -4,24 +4,24 @@ date: '2023-05-26'
 tags: ['escrito', 'sql', 'database','Cheat Sheet']
 draft: false
 images: ['/static/images/developer-intro.png']
-summary: 'SQL es el lenguaje mas usado en la actualidad para interactuar con sistemas de 
-gestion de base de datos relacionados, con el hacemos consultas, inserciones y más...'
+summary: 'SQL es el lenguaje más usado en la actualidad para interactuar con sistemas de 
+gestión de base de datos relacionados, con el hacemos consultas, inserciones y más...'
 ---
 
 # Intro
 
-SQL puede que no sea la skill más emocionante, pero es de lo mas demandado en la industria actual
+SQL puede que no sea la habilidad más emocionante, pero es de lo más demandado en la industria actual
 y es una excelente opción. Aprender SQL te brinda una base sólida para diversas carreras, ya sea como
-Backend Developer, Data Scientist, o incluso Business Intelligence Analyst.
+Backend Developer, Data Scientist, o inclusive Business Intelligence Analyst.
 
 En la actualidad, era impulsada por datos, las bases de datos se han vuelto fundamentales para el almacenamiento,
 gestión y análisis de información. Dominar SQL te permitirá interactuar con estas, realizar consultas
 sofisticadas y extraer información valiosa que impulsará la toma de decisiones informadas en diferentes industrias.
 
-Sea el motivo orazon, hay algo que debemos tener encuenta y sin importar el tiempo que nos tome es no dedicarle todo
-el tiempo a los tutorial de la plataforma que sea, esto quiere decir, tenemos que crear una aplicación con lo que tenemos
-y los mismos contratiempo y busqueda de información faltante, es lo que nos ayuda a crecer. Por tanto esto intenta
-ser una guia de dicha información.
+Sea el motivo o razón, hay algo que debemos tener en cuenta y sin importar el tiempo que nos tome es no dedicarle todo
+el tiempo a los tutoriales de la plataforma que sea, esto quiere decir, tenemos que crear una aplicación con lo que tenemos
+y los mismos contratiempo y búsqueda de información faltante, es lo que nos ayuda a crecer. Por tanto, esto intenta
+ser una guía de dicha información.
 
 # Contenido
 
@@ -43,7 +43,7 @@ ser una guia de dicha información.
 
 ## **[Funciones de agregación](#funciones_agregación)**
 
-## **[Crear y borrar index](#index)**
+## **[Crear y borrar índex](#index)**
 
 ## **[Crear vistas](#crear_vistas)**
 
@@ -79,8 +79,6 @@ ser una guia de dicha información.
 
 **Consulta**: Una solicitud de datos o información de una tabla de base de datos o combinación de tablas.
 
-**Cliente de base de datos**: Un programa que te permite conectarte a una base de datos de Postgres y ejecutar consultas.
-
 **Servidor de base de datos**: Un programa que se ejecuta en una computadora y administra la base de datos.
 
 **Sistema de gestión de bases de datos**: Un programa que gestiona la base de datos.
@@ -93,30 +91,431 @@ ser una guia de dicha información.
 
 ## <span id="crear_borrar">Crear y borrar bases de datos</span>
 
+CREATE DATABASE<br/>
+Se usa para crear la base de datos.
+
 ```sql
-  SELECT * FROM users WHERE age > 18;
+  CREATE DATABASE nombre_db;
+```
+
+DROP DATABASE<br/>
+Se usa para borrar la base de datos.
+
+```sql
+  DROP DATABASE nombre_db;
 ```
 
 ## <span id="crear_tablas">Crear tablas</span>
 
+CREATE TABLE<br/>
+Usado para crear una nueva tabla dentro de una base de datos.
+
+```sql
+CREATE TABLE nombre_tabla (
+	nombre_col1 datatype,
+    nombre_col2 datatype,
+    ...
+);
+```
+
+ALTER TABLE<br/>
+Usado para agregar, eliminar o modificar una columna existente dentro de una tabla.
+
+```sql
+ALTER TABLE nombre_tabla
+ADD nombre_col datatype;
+```
+
+```sql
+ALTER TABLE nombre_tabla
+DROP COLUMN nombre_col;
+```
+
+```sql
+ALTER TABLE nombre_tabla
+ALTER COLUMN nombre_col datatype;
+```
+
+DROP TABLE<br/>
+Usado para borrar la tabla.
+
+```sql
+DROP TABLE nombre_tabla;
+```
+
 ## Comentarios
+
+Comentarios de una línea usa (-) y con múltiples líneas es necesario empezar con /_ y terminar _/
+
+```sql
+-- Comentario de una línea
+
+/* Comentario
+de múltiples
+líneas
+*/
+```
 
 ## <span id="insertar_actualizar">Insertar, actualizar y borrar datos</span>
 
+INSERT sirve para ingresar datos nuevos en una tabla.
+
+```sql
+  INSERT INTO nombre_tabla (col1, col2, ...)
+  VALUES (val1, val2, ...)
+```
+
+UPDATE se utiliza para actualizar o modificar datos existentes en una tabla.
+
+```sql
+  UPDATE nombre_tabla
+  SET col1 = val1, col2 = val2,...
+  WHERE condición;
+```
+
+DELETE se usa para borrar valores de una tabla.
+
+```sql
+  DELETE FROM nombre_tabla
+  WHERE condición;
+```
+
 ## <span id="consulta_datos">Consulta de datos</span>
+
+SELECT usado para consultar dentro de la base de datos.
+
+```sql
+  SELECT col1, col2,...
+  FROM nombre_tabla;
+```
+
+WHERE hace de filtro para los valores.
+
+```sql
+  SELECT col1, col2, ...
+  FROM nombre_tabla
+  WHERE condición;
+```
+
+AND / OR utilizados para filtrar bajo más de una condición.
+
+```sql
+  SELECT col1, col2, ...
+  FROM nombre_tabla
+  WHERE condicion1 AND condicion2;
+```
+
+```sql
+  SELECT col1, col2, ...
+  FROM nombre_tabla
+  WHERE condicion1 OR condicion2;
+```
+
+ORDER BY / ASC-DESC es usado para ordenar los valores de manera ascendente o descendente.
+
+```sql
+  SELECT col1, col2, ...
+  FROM nombre_tabla
+  ORDER BY col1, col2, ASC|DESC;
+  -- puede ser ASC O DESC no ambos
+```
+
+DISTINCT utilizada para retornar valores, evitando los duplicados.
+
+```sql
+  SELECT DISTINCT col1, col2, ...
+  FROM nombre_tabla;
+```
+
+IS NULL indica si un valor no existe.
+
+```sql
+  SELECT col1, col2, ...
+  FROM nombre_tabla
+  WHERE column IS NULL;
+```
+
+IN permite especificar multiples valores dentro del WHERE.
+
+```sql
+  SELECT col1 , col2, ...
+  FROM nombre_tabla
+  WHERE column IN (val1, val2, ...)
+```
+
+LIKE de igual manera se usa en el WHERE para buscar patrones específicos en una columna.
+
+```sql
+  SELECT col1, col2, ...
+  FROM nombre_tabla
+  WHERE columna LIKE patrón;
+```
+
+BETWEEN filtra resultados dentro de un rango establecido.
+
+```sql
+  SELECT col1, col2, ...
+  FROM nombre_tabla
+  WHERE column BETWEEN val1 AND val2;
+```
+
+AS (alias) usado para ingresar un nombre temporal, ya sea de una tabla o columna.
+
+```sql
+  SELECT col1 AS alias1, col2 AS alias2, ...
+  FROM nombre_tabla AS alias3;
+```
+
+DATE se emplea para almacenar una fecha (año, mes, día).
+
+```sql
+  SELECT col1, col2, ...
+  FROM nombre_tabla
+  WHERE column = DATA '2020-20-02';
+```
 
 ## <span id="consulta_multiples">Consulta de múltiples tablas</span>
 
+JOIN es utilizado para combinar filas de dos o más tablas, tomando una columna en común.
+
+```sql
+  SELECT nombre_col(s)
+  FROM tabla1
+  INNER JOIN tabla2
+  ON tabla1.nombre_col = tabla2.nombre_col;
+```
+
+LEFT JOIN devuelve todos los registros de la tabla izquierda y los registros coincidentes de la tabla derecha.
+Si no hay coincidencias, los valores de la tabla derecha serán NULL.
+
+```sql
+  SELECT nombre_col(s)
+  FROM tabla1
+  LEFT JOIN tabla2
+  ON tabla1.nombre_col = tabla2.nombre_col;
+```
+
+RIGHT JOIN devuelve todos los registros de la tabla derecha y los registros coincidentes de la tabla izquierda.
+Si no hay coincidencias, los valores de la tabla izquierda serán NULL.
+
+```sql
+  SELECT nombre_col(s)
+  FROM tabla1
+  RIGHT JOIN tabla2
+  ON tabla1.nombre_col = tabla2.nombre_col;
+```
+
+FULL JOIN devuelve todos los registros de ambas tablas, coincidentes y no coincidentes. Si no hay coincidencias,
+los valores de la tabla izquierda o derecha serán NULL según corresponda.
+
+```sql
+  SELECT nombre_col(s)
+  FROM tabla1
+  FULL JOIN tabla2
+  ON tabla1.nombre_col = tabla2.nombre_col;
+```
+
+UNION se utiliza para combinar el resultado de dos o más consultas en una única tabla de resultados.
+Ambas tablas deben contener la misma cantidad de columnas y tipos de datos compatibles.
+
+```sql
+  SELECT nombre_col(s)
+  FROM tabla1
+  UNION
+  SELECT nombre_col(s)
+  FROM tabla2;
+```
+
 ## <span id="agrupando_datos">Agrupando datos</span>
+
+GROUP BY se utiliza para agrupar filas en base a una o varias columnas
+y realizar operaciones de agregación en los grupos resultantes.
+
+```sql
+  SELECT nombre_col, funcion_agregada(nombre_col)
+  FROM nombre_tabla
+  GROUP BY nombre_col;
+```
+
+HAVING se usa para aplicar condiciones de filtrado a los grupos resultantes de una consulta.
+Ya que WHERE no puede emplear funciones agregadas múltiples.
+
+```sql
+  SELECT columna1, columna2, función_agregación(columna3)
+  FROM tabla
+  GROUP BY columna1, columna2
+  HAVING condición;
+```
 
 ## <span id="funciones_agregación">Funciones de agregación</span>
 
+COUNT se utiliza para contar el número de filas que cumplen con determinadas condiciones.
+
+```sql
+  SELECT COUNT(columna)
+  FROM tabla
+  WHERE condición;
+```
+
+SUM calcula la suma de los valores en una columna numérica.
+
+```sql
+  SELECT SUM(columna) AS TotalSuma
+  FROM tabla
+  WHERE condición;
+```
+
+AVG se utiliza para calcular el promedio de los valores en una columna numérica.
+
+```sql
+  SELECT AVG(columna) AS Promedio
+  FROM tabla
+  WHERE condición;
+```
+
+MIN retorna el valor mínimo en una columna.
+
+```sql
+  SELECT MIN(columna) AS ValorMinimo
+  FROM tabla;
+  WHERE condition;
+```
+
+MAX retorna el valor máximo en una columna.
+
+```sql
+  SELECT MAX(columna) AS ValorMaximo
+  FROM tabla;
+  WHERE condition;
+```
+
 ## <span id="index">Crear y borrar index</span>
+
+CREATE INDEX se utiliza para crear un índice (llave de búsqueda) en una o varias columnas de una tabla.
+
+```sql
+  CREATE INDEX nombre_indice
+  ON nombre_tabla (columna1, columna2, ...);
+```
+
+DROP INDEX elimina el índice existente.
+
+```sql
+  DROP INDEX nombre_indice
+  ON nombre_tabla;
+```
 
 ## <span id="crear_vistas">Crear vistas</span>
 
+Una view (vista), es una version virtual de las tablas.
+
+CREATE VIEW crea la vista.
+
+```sql
+  CREATE VIEW nombre_vista AS
+  SELECT columna1, columna2, ...
+  FROM nombre_tabla
+  WHERE condición;
+```
+
+DROP VIEW elimina la vista.
+
+```sql
+  DROP VIEW nombre_vista;
+```
+
 ## Condicionales
+
+IF se utiliza en algunos sistemas de bases de datos específicos para realizar
+evaluaciones condicionales y retornar un resultado basado en las mismas.
+
+```sql
+  IF condición THEN
+    -- código si es verdadero
+  ELSE
+    -- código si es falso
+  END IF;
+```
+
+Ejemplo en MySQL
+
+```sql
+  SELECT columna1,
+    IF(columna2 = 'valor', 'Resultado1', 'Resultado2') AS Resultado
+  FROM tabla;
+```
+
+CASE se utiliza para realizar evaluaciones condicionales y retornar un resultado basado en esas evaluaciones.
+
+```sql
+  SELECT columna1,
+    CASE
+      WHEN condición THEN 'Resultado1'
+      WHEN condición THEN 'Resultado2'
+      ELSE 'Resultado3'
+    END AS Resultado
+  FROM bombre_tabla;
+```
+
+IFNULL() empleado para manejar valores nulos en una expresión.
+Proporciona un valor de reemplazo cuando una columna o expresión es nula.
+
+```sql
+  IFNULL(expresión, valor_reemplazo)
+```
+
+```sql
+  SELECT IFNULL(nombre_col, 'valor')
+  FROM nombre_tabla;
+```
+
+COALESCE() permite especificar una lista de expresiones separadas por comas y
+devuelve la primera expresión no nula de esa lista.
+
+```sql
+  COALESCE(expresion1, expresion2, ...)
+```
+
+```sql
+  SELECT COALESCE(nombre_col, 'valor')
+  FROM nombre_tabla;
+```
 
 ## Subconsultas
 
+```sql
+  SELECT columna1, columna2
+  FROM (SELECT columna3 FROM tabla2 WHERE condición) AS subconsulta;
+```
+
 ## Comodines
+
+Recordando que LIKE se usa en el WHERE para buscar patrones.<br/>
+Los "wildcards" o caracteres comodines son símbolos especiales que se utilizan para
+realizar coincidencias parciales en consultas de texto.
+
+% Representa cualquier cantidad de caracteres (incluyendo cero caracteres) en una posición dentro de un valor de texto.
+
+```sql
+  SELECT columna
+  FROM tabla
+  WHERE columna LIKE 'inicio%';
+```
+
+\_ Representa un único carácter en una posición específica dentro de un valor de texto.
+
+```sql
+  SELECT columna
+  FROM tabla
+  WHERE columna LIKE 'a_ex';
+```
+
+[] Se utiliza para especificar un conjunto de caracteres permitidos en una posición determinada dentro de un valor de texto.
+
+```sql
+  SELECT columna
+  FROM tabla
+  WHERE columna LIKE 'c[aeiou]t';
+```
+
+Se que es una buena cantidad de información, pero la idea es absorberla poco a poco.
