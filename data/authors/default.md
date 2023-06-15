@@ -27,7 +27,32 @@ Compartir. No deberiamos guardar las cosas para solo para nosotros mismo. Ademas
 
 Sthepen King.
 
+## Experiencia
+
+**Freelancer (desarrollador web) 2021-2023**
+
+**Capturista - SEDENA 2021**
+Crear los reportes sobre los insumos médicos, actas administrativas, contratos del personal. Encargado del almacén de insumos médicos. Así como apoyar a los familiares de los pacientes.
+
+**Auxiliar Deli - Costco SA de CV 2018- 2019**
+Preparación de alimentos, insumos. Participar en los inventarios tanto de la tienda como del área (deli). Planificar hoja de producción. Coordinar y organizar al personal, para una adecuada producción del día a día.
+
+**Auxiliar de cocina - Cocina familiar 2015 - 2018**
+Crear los reportes sobre los insumos médicos, actas administrativas, contratos del personal. Encargado del almacén de insumos médicos. Así como apoyar a los familiares de los pacientes.
+
 ## Cursos / Formación
+
+**Business Agility G5**
+<a href="https://app.aluracursos.com/degree/certificate/365c5c03-039c-4dcf-b7af-98cfb9221989">Certificado</a>
+Alura LATAM - Oracle
+
+**Desarrollo Personal G5**
+<a href="https://app.aluracursos.com/degree/certificate/058aff4a-ed3e-42b0-8e05-ea6cfa3ddb75">Certificado</a>
+Alura LATAM - Oracle
+
+**Principiante en Programación G5**
+<a href="https://app.aluracursos.com/degree/certificate/e282fc3c-6df7-44c5-8940-420928a83205">Certificado</a>
+Alura LATAM - Oracle
 
 **Curso Java básico**
 IPN, Centro de Investigación en Computación 2019
@@ -46,3 +71,11 @@ Udemy 2022
 
 **AWS Certified Developer Associate DVA-C01**
 Udemy en curso
+
+**Ingeniería en Mecatrónica**
+UPIITA
+Unidad Profesional en Ingeniería y Tecnologías Avanzadas
+
+**Técnico en Instalaciones y Mantenimiento Eléctrico**
+CECYT 4
+Centros de Estudios Cientíﬁcos y Tecnológicos
