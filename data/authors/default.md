@@ -30,6 +30,9 @@ Sthepen King.
 ## Experiencia
 
 **Freelancer (desarrollador web) 2021-2023**
+He creado diversas web, las principales tecnologias son Reactjs y Nextjs, tambien he trabajado con proyectos
+en Angular, Python y Java, en base de datos he utilizado MySQL y MongoDB.
+Para mas información <a hrf="https://my-blog-crisjgc.vercel.app/projects">Aquí</a>
 
 **Capturista - SEDENA 2021**
 Crear los reportes sobre los insumos médicos, actas administrativas, contratos del personal. Encargado del almacén de insumos médicos. Así como apoyar a los familiares de los pacientes.
@@ -41,6 +44,9 @@ Preparación de alimentos, insumos. Participar en los inventarios tanto de la ti
 Crear los reportes sobre los insumos médicos, actas administrativas, contratos del personal. Encargado del almacén de insumos médicos. Así como apoyar a los familiares de los pacientes.
 
 ## Cursos / Formación
+
+**EFSET English Certificate 75/100**
+<a href="https://www.efset.org/cert/ahJKfg">Certificado</a>
 
 **Business Agility G5**
 <a href="https://app.aluracursos.com/degree/certificate/365c5c03-039c-4dcf-b7af-98cfb9221989">Certificado</a>
